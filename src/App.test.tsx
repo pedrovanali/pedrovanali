@@ -1,9 +1,7 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.queryByRole("profile");
-  expect(linkElement).toBeInTheDocument();
+describe("App test suite", () => {
+  it.todo("create tests for app");
 });

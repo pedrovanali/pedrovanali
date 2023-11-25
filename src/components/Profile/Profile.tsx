@@ -1,10 +1,9 @@
+import clsx from "clsx";
+import { IScroll } from "../../interfaces";
 import "./Profile.scss";
 
-interface Props {
-  scrollPosition: number;
-}
-const Profile = ({ scrollPosition }: Props) => (
-  <div className={scrollPosition > 40 ? "profile small" : "profile"}></div>
+const Profile = ({ scrollPosition }: IScroll) => (
+  <div className={clsx("profile", scrollPosition > 40 && "small")}></div>
 );
 
 export default Profile;

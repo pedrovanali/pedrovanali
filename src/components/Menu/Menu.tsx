@@ -1,19 +1,24 @@
+import clsx from "clsx";
+import { IScroll } from "../../interfaces";
 import "./Menu.scss";
-const Menu = () => {
+
+const Menu = ({ scrollPosition }: IScroll) => {
   return (
-    <nav className="nav">
-      <ul>
-        <li>
-          <span>Home</span>
-        </li>
-        <li>
-          <span>History</span>
-        </li>
-        <li>
-          <span>Contact</span>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav className={clsx("nav", scrollPosition > 40 && "small")}>
+        <ul>
+          <li>
+            <span>Home</span>
+          </li>
+          <li>
+            <span>History</span>
+          </li>
+          <li>
+            <span>Contact</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

@@ -1,0 +1,31 @@
+.profile {
+    // margin-left: 3em;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease;
+    background: {
+        image: url("../../assets/profile.jpeg");
+        size: cover;
+        repeat: no-repeat;
+    }
+    border: {
+        color: #fff;
+        width: 10px;
+        radius: 50%;
+        style: solid;
+    }
+    &.small {
+        margin-left: 0;
+        transition:
+            transform 0.5s ease,
+            margin 0.5 ease-in-out,
+            border 0.5 ease;
+        transform: scale(0.3) translate(-200px, -140px);
+        transform-origin: center;
+        border: {
+            color: #fff;
+            width: 4px;
+        }
+    }
+}

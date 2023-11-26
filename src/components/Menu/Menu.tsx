@@ -8,10 +8,7 @@ const Menu = ({ scrollPosition }: IScroll) => {
       <nav className={clsx("nav", scrollPosition > 40 && "small")}>
         <ul>
           <li>
-            <span>Home</span>
-          </li>
-          <li>
-            <span>History</span>
+            <span>Work History</span>
           </li>
           <li>
             <span>Contact</span>

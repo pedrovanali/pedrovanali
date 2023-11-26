@@ -1,18 +1,32 @@
 import "./Company.scss";
 
-interface CompanyProps {
-  logo: string;
-  alt?: string;
+type CompanyProps = {
+  logo: string | React.ReactNode;
   description: string;
-}
+  companyName: string;
+  techStack: string;
+};
 
-const Company = ({ logo, alt, description }: CompanyProps) => {
+const Company = ({
+  logo,
+  description,
+  companyName,
+  techStack,
+}: CompanyProps) => {
   return (
     <div className="history">
       <div className="company-logo">
-        <img src={logo} alt={alt} />
+        {typeof logo === "string" ? (
+          <img src={logo} alt={companyName} />
+        ) : (
+          logo
+        )}
       </div>
-      <div className="description">{description}</div>
+      <div className="company">
+        <div className="company-name">{companyName}</div>
+        <div className="tech-stack">Tech Stack: {techStack}</div>
+        <div className="description">{description}</div>
+      </div>
     </div>
   );
 };

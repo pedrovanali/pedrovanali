@@ -1,5 +1,6 @@
 .profile {
-    // margin-left: 3em;
+    position: absolute;
+    margin: 1em;
     box-sizing: border-box;
     width: 200px;
     height: 200px;
@@ -16,16 +17,43 @@
         style: solid;
     }
     &.small {
-        margin-left: 0;
-        transition:
-            transform 0.5s ease,
-            margin 0.5 ease-in-out,
-            border 0.5 ease;
+        margin: 0;
+        transition: all 0.5s ease;
         transform: scale(0.3) translate(-200px, -220px);
         transform-origin: center;
         border: {
             color: #fff;
             width: 4px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .profile {
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+        transition: none;
+        margin: .5em;
+        background: {
+            image: url("../../assets/profile.jpeg");
+            size: cover;
+            repeat: no-repeat;
+        }
+        border: {
+            color: #fff;
+            width: 10px;
+            radius: 50%;
+            style: solid;
+        }
+        border: {
+            color: #fff;
+            width: 4px;
+        }
+        &.small {
+            transform: none;
+            transition: none;
+            margin: .5em;
         }
     }
 }

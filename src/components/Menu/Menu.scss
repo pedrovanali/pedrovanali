@@ -23,15 +23,19 @@
         }
         li {
             float: left;
-            span {
+            button {
+                background: none !important;
+                border: none;
+                font-family: "Bebas Neue", sans-serif;
                 cursor: pointer;
-                display: block;
+                padding: .2rem .5rem;
                 color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
+                font: {
+                    size: 3rem;
+                }
+
                 &:hover {
-                    transition: color 1s ease;
+                    transition: color .5s ease;
                     color: #ff0;
                 }
             }
@@ -58,7 +62,7 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 932px) {
     .nav {
         top: 0;
         left: 0;
@@ -68,8 +72,10 @@
         transition: none;
 
         ul {
-            font: {
-                size: 1.5rem;
+            button {
+                font: {
+                    size: 1.5rem;
+                }
             }
         }
         &.small {

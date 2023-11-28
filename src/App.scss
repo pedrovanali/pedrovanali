@@ -5,3 +5,9 @@
 
   background: #253237;
 }
+
+@media screen and (max-width: 932px) {
+  .stack-container {
+    display: none;
+  }
+}

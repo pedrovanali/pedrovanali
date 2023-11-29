@@ -18,7 +18,7 @@ const useParallaxScroll = (parallax: React.MutableRefObject<IParallax>) => {
     };
   }, [handleScroll]);
 
-  return { scrollPosition, handleScroll };
+  return { scrollPosition, handleScroll, scrollTo: parallax?.current?.scrollTo };
 };
 
 export default useParallaxScroll;

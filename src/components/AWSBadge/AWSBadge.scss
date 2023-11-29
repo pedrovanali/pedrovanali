@@ -1,0 +1,12 @@
+.badge-container {
+    top: 5rem;
+    position: absolute;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font: {
+        weight: 500;
+        size: 1.5rem;
+    }
+}

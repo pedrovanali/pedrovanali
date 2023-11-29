@@ -7,13 +7,14 @@ type MenuProps = IScroll & {
 };
 
 const Menu = ({ scrollTo, scrollPosition }: MenuProps) => {
-  console.log(scrollTo)
   return (
     <header>
       <nav className={clsx("nav", scrollPosition > 40 && "small")}>
         <ul>
           <li>
-            <button onClick={() => scrollTo(0.05)}>Work History</button>
+            <button onClick={() => scrollTo && scrollTo(0.05)}>
+              Work History
+            </button>
           </li>
           <li>
             <button>Contact</button>

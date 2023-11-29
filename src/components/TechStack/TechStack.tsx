@@ -6,6 +6,7 @@ import reactSpring from "../../assets/react-spring.png";
 import sass from "../../assets/sass.png";
 import reactTestingLibrary from "../../assets/react-testing.png";
 import git from "../../assets/git.png";
+import aws from "../../assets/aws.png";
 
 const TechStack = () => {
   const props = useSpring({
@@ -50,6 +51,10 @@ const TechStack = () => {
         <li>
           <img src={git} alt="Git Logo" />
           Git
+        </li>
+        <li>
+          <img src={aws} alt="AWS Logo" />
+          Amazon Web Services
         </li>
       </ul>
     </div>

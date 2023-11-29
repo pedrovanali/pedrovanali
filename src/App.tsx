@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import {
   Parallax,
   ParallaxLayer,
@@ -21,7 +21,7 @@ function App() {
 
   const scrollTo = useMemo(
     () => parallax?.current?.scrollTo ?? ((offset: number) => {}),
-    [parallax.current]
+    [parallax]
   );
 
   return (

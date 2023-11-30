@@ -1,0 +1,16 @@
+.college-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    top: 5rem;
+    right: 3rem;
+    position: absolute;
+    width: 180px;
+
+    h3 {
+        color: #fc0;
+    }
+    p {
+        color: white;
+    }
+}

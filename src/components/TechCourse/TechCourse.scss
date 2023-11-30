@@ -1,0 +1,23 @@
+.tech-course-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 5rem;
+    right: 15rem;
+    position: absolute;
+    width: 150px;
+    margin-right: 1rem;
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    h3 {
+        color: #fc0;
+    }
+    p {
+        color: white;
+    }
+}

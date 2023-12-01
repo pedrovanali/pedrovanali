@@ -28,14 +28,14 @@
                 border: none;
                 font-family: "Bebas Neue", sans-serif;
                 cursor: pointer;
-                padding: .2rem .5rem;
+                padding: 0.2rem 0.5rem;
                 color: white;
                 font: {
                     size: 3rem;
                 }
 
                 &:hover {
-                    transition: color .5s ease;
+                    transition: color 0.5s ease;
                     color: #ff0;
                 }
             }
@@ -72,17 +72,21 @@
         transition: none;
 
         ul {
-            button {
-                font: {
-                    size: 1.5rem;
+            li {
+                button {
+                    font: {
+                        size: 2rem;
+                    }
                 }
             }
         }
         &.small {
             transition: none;
             ul {
-                font: {
-                    size: 1.5rem;
+                button {
+                    font: {
+                        size: 2rem;
+                    }
                 }
             }
         }

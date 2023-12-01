@@ -17,7 +17,7 @@ const Menu = ({ scrollTo, scrollPosition }: MenuProps) => {
             </button>
           </li>
           <li>
-            <button>Contact</button>
+            <button onClick={() => scrollTo && scrollTo(3.5)}>Contact</button>
           </li>
         </ul>
       </nav>

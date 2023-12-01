@@ -1,11 +1,12 @@
 import { IParallax } from "@react-spring/parallax";
 import { useState, useEffect, useCallback } from "react";
 
-const useParallaxScroll = (parallax: React.MutableRefObject<IParallax>) => {
+const useParallaxScroll = (parallax: IParallax) => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollTo = parallax?.scrollTo;
   const handleScroll = useCallback(() => {
     if (parallax) {
-      const position = parallax.current.current;
+      const position = parallax.current;
       setScrollPosition(position);
     }
   }, [parallax, setScrollPosition]);
@@ -18,7 +19,7 @@ const useParallaxScroll = (parallax: React.MutableRefObject<IParallax>) => {
     };
   }, [handleScroll]);
 
-  return { scrollPosition, handleScroll, scrollTo: parallax?.current?.scrollTo };
+  return { scrollPosition, handleScroll, scrollTo };
 };
 
 export default useParallaxScroll;

@@ -4,6 +4,11 @@
   height: 100dvh;
 
   background: #253237;
+  .education-header {
+    float: right;
+    color: white;
+    margin: 5rem;
+  }
 }
 
 @media screen and (max-width: 932px) {

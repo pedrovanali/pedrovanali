@@ -1,5 +1,8 @@
+@use "sass:map";
+@import "../../theme.scss";
+$bebas: map.get($font-family, "bebas-neue");
 .nav {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: $bebas, sans-serif;
     position: fixed;
     top: 0;
     right: 100px;
@@ -8,7 +11,7 @@
         bottom: {
             style: solid;
             width: 4px;
-            color: #fc0;
+            color: $primary;
         }
     }
     ul {
@@ -26,23 +29,23 @@
             button {
                 background: none !important;
                 border: none;
-                font-family: "Bebas Neue", sans-serif;
+                font-family: $bebas, sans-serif;
                 cursor: pointer;
                 padding: 0.2rem 0.5rem;
-                color: white;
+                color: $bright;
                 font: {
                     size: 3rem;
                 }
 
                 &:hover {
                     transition: color 0.5s ease;
-                    color: #ff0;
+                    color: $primary-light;
                 }
             }
         }
     }
     &.small {
-        background-color: #253237;
+        background-color: $background;
         display: flex;
         right: 0;
         transition: border 0.5s;
@@ -62,7 +65,7 @@
     }
 }
 
-@media screen and (max-width: 932px) {
+@media screen and (max-width: $xs) {
     .nav {
         top: 0;
         left: 0;

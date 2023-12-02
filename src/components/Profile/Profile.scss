@@ -1,3 +1,4 @@
+@import "../../theme.scss";
 .profile {
     position: absolute;
     margin: 1em;
@@ -11,7 +12,7 @@
         repeat: no-repeat;
     }
     border: {
-        color: #fff;
+        color: $bright;
         width: 10px;
         radius: 50%;
         style: solid;
@@ -22,13 +23,13 @@
         transform: scale(0.3) translate(-200px, -220px);
         transform-origin: center;
         border: {
-            color: #fff;
+            color: $bright;
             width: 4px;
         }
     }
 }
 
-@media screen and (max-width: 932px) {
+@media screen and (max-width: $xs) {
     .profile {
         box-sizing: border-box;
         width: 50px;
@@ -41,13 +42,13 @@
             repeat: no-repeat;
         }
         border: {
-            color: #fff;
+            color: $bright;
             width: 10px;
             radius: 50%;
             style: solid;
         }
         border: {
-            color: #fff;
+            color: $bright;
             width: 4px;
         }
         &.small {

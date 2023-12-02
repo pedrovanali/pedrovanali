@@ -1,18 +1,24 @@
+@import "./theme.scss";
 .container {
   text-align: center;
   width: 100%;
   height: 100dvh;
 
-  background: #253237;
+  background: $background;
   .education-header {
     float: right;
-    color: white;
+    color: $bright;
     margin: 5rem;
+    text-transform: uppercase;
+    font: {
+      weight: 400;
+      family: "Bebas Neue", sans-serif;
+    }
   }
 }
 
-@media screen and (max-width: 932px) {
-  .stack-container {
+@media screen and (max-width: $xs) {
+  .hide-container {
     display: none;
   }
 }

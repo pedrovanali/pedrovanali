@@ -1,0 +1,17 @@
+@use "sass:map";
+$primary: #ffcc00;
+$primary-light: #ffff00;
+$bright: #ffffff;
+$background: #253237;
+$font-family: (
+    "inconsolata": "Inconsolata",
+    "bebas-neue": "Bebas Neue"
+);
+
+$font-weights: (
+    "regular": 400,
+    "semi-bold": 500,
+    "bold": 600
+);
+// Breakpoints
+$xs: 932px;

@@ -1,6 +1,8 @@
+@use "sass:map";
+@import "./theme.scss";
 body {
   margin: 0;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: map.get($font-family, "inconsolata"), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

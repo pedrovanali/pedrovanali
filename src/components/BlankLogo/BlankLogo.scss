@@ -1,5 +1,6 @@
+@import "../../theme.scss";
 .logo {
-    background-color: white;
+    background-color: $bright;
     color: black;
     display: flex;
     align-items: center;

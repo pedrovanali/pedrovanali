@@ -17,6 +17,11 @@ const Menu = ({ scrollTo, scrollPosition }: MenuProps) => {
             </button>
           </li>
           <li>
+            <button onClick={() => scrollTo && scrollTo(2)}>
+              Education
+            </button>
+          </li>
+          <li>
             <button onClick={() => scrollTo && scrollTo(3.5)}>Contact</button>
           </li>
         </ul>

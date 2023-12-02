@@ -1,11 +1,13 @@
+@use "sass:map"; 
+@import "../../theme.scss";
 .history {
     box-sizing: border-box;
     width: 500px;
     margin: auto;
     display: flex;
-    color: #fff;
+    color: $bright;
     justify-content: center;
-    background-color: #253237;
+    background-color: $background;
     padding: 1rem 0;
 }
 .company {
@@ -15,11 +17,11 @@
     flex-direction: row;
     width: calc(100% - 82px);
     padding: 1rem;
-    text-align: justify;
+    text-align: left;
     &-name {
         font-size: 2rem;
         width: 100%;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: map.get($font-family, "bebas-neue");
     }
     &-logo {
         // box-sizing: border-box;
@@ -41,16 +43,18 @@
     .description {
         padding: 0.5rem 0;
         width: 100%;
+        letter-spacing: 0.05rem;
+        line-height: 1.5rem;
     }
     .tech-stack {
         padding: 0.5rem 0;
         font-size: 1.2rem;
         width: 100%;
         font-weight: 500;
-        color: #fc0;
+        color: $primary;
     }
 }
-@media screen and (max-width: 932px) {
+@media screen and (max-width: $xs) {
     .history {
         display: inline-block;
         padding: 1rem;

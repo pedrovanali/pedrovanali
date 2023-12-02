@@ -1,4 +1,15 @@
+@import "../../theme.scss";
 .education-container {
     display: flex;
     flex-direction: column;
+    position: relative;
+    h1 {
+        color: $primary;
+        font: {
+            weight: 600;
+        }
+        text: {
+            transform: uppercase;
+        }
+    }
 }

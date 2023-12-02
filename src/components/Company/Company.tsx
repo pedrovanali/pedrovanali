@@ -1,8 +1,8 @@
 import "./Company.scss";
 
 type CompanyProps = {
-  logo: string | React.ReactNode;
-  description: string;
+  logo: React.ReactNode;
+  description: React.ReactNode;
   companyName: string;
   techStack: string;
 };
@@ -16,11 +16,7 @@ const Company = ({
   return (
     <div className="history">
       <div className="company-logo">
-        {typeof logo === "string" ? (
-          <img src={logo} alt={companyName} />
-        ) : (
-          logo
-        )}
+        {typeof logo === "string" ? <img src={logo} alt={companyName} /> : logo}
       </div>
       <div className="company">
         <div className="company-name">{companyName}</div>

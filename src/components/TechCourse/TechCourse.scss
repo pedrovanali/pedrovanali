@@ -1,3 +1,4 @@
+@import "../../theme.scss";
 .tech-course-container {
     box-sizing: border-box;
     display: flex;
@@ -15,9 +16,24 @@
     }
 
     h3 {
-        color: #fc0;
+        color: $primary;
     }
     p {
-        color: white;
+        color: $bright;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .tech-course-container {
+        position: relative;
+        top: 0;
+        left: 1rem;
+
+        img {
+            // justify-content: center;
+            // width: 80px;
+            // height: 80px;
+            border-radius: 50%;
+        }
     }
 }

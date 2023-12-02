@@ -12,9 +12,11 @@ import Companies from "./components/Companies";
 import Contact from "./components/Contact";
 import TechCourse from "./components/TechCourse";
 import TechStack from "./components/TechStack";
+import { useAdaptiveTriggers } from "./hooks/useAdapatitiveTriggers";
 
 function App() {
   const [parallax, setParallax] = useState<IParallax>(null!);
+  const width = useAdaptiveTriggers({});
 
   const { handleScroll, scrollPosition, scrollTo } =
     useParallaxScroll(parallax);
@@ -44,6 +46,7 @@ function App() {
           sticky={{ start: 1, end: 3 }}
           speed={3}
           style={{ zIndex: 1 }}
+          className="hide-container"
         >
           <h1 className="education-header">Education</h1>
         </ParallaxLayer>
@@ -53,6 +56,7 @@ function App() {
           sticky={{ start: 1.2, end: 2 }}
           speed={2}
           style={{ zIndex: -1 }}
+          className="hide-container"
         >
           <College />
         </ParallaxLayer>
@@ -62,6 +66,7 @@ function App() {
           sticky={{ start: 1.5, end: 2 }}
           speed={3}
           style={{ zIndex: -1 }}
+          className="hide-container"
         >
           <TechCourse />
         </ParallaxLayer>
@@ -71,6 +76,7 @@ function App() {
           sticky={{ start: 2.4, end: 3 }}
           speed={2.8}
           style={{ zIndex: -1 }}
+          className="hide-container"
         >
           <AWSBadge />
         </ParallaxLayer>
@@ -88,7 +94,7 @@ function App() {
           factor={0.15}
           speed={2}
           style={{ zIndex: -1 }}
-          className="stack-container"
+          className="hide-container"
         >
           <TechStack />
         </ParallaxLayer>

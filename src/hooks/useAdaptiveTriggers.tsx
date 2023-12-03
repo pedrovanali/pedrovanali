@@ -1,10 +1,11 @@
 import { useLayoutEffect, useState } from "react";
+import { breakpoints } from "../configs/breakpoints";
 
 export enum Adaptive {
   xs = "xs",
-  s = "s",
-  m = "m",
-  l = "l",
+  sm = "sm",
+  md = "md",
+  lg = "lg",
   xl = "xl",
 }
 
@@ -26,21 +27,21 @@ export const useAdaptiveTriggers = ({
   const [width, setWidth] = useState<Adaptive>(Adaptive.xl);
   useLayoutEffect(() => {
     const handleResize = () => {
-      if (window?.innerWidth < 768) {
+      if (window?.innerWidth < breakpoints.xs) {
         onExtraSmallEnter?.();
         return setWidth(Adaptive.xs);
       }
-      if (window?.innerWidth < 1024) {
+      if (window?.innerWidth < breakpoints.sm) {
         onSmallEnter?.();
-        return setWidth(Adaptive.s);
+        return setWidth(Adaptive.sm);
       }
-      if (window?.innerWidth < 1280) {
+      if (window?.innerWidth < breakpoints.md) {
         onMediumEnter?.();
-        return setWidth(Adaptive.m);
+        return setWidth(Adaptive.md);
       }
-      if (window?.innerWidth < 1440) {
+      if (window?.innerWidth < breakpoints.lg) {
         onLargeEnter?.();
-        return setWidth(Adaptive.l);
+        return setWidth(Adaptive.lg);
       }
       onExtraLargeEnter?.();
       return setWidth(Adaptive.xl);

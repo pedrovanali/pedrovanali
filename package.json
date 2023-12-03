@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:watch": "react-scripts test --watchAll",
+    "test:watch": "react-scripts test --watchAll --coverage",
     "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
@@ -36,6 +36,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "testing-library/no-node-access": 0
+        }
+      }
     ]
   },
   "browserslist": {

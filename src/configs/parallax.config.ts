@@ -1,9 +1,13 @@
-import { Adaptive } from "../hooks/useAdapatitiveTriggers";
+import { Adaptive } from "../hooks/useAdaptiveTriggers";
 
 export enum Pages {
-  firstPage = "firstPage",
-  secondPage = "secondPage",
-  thirdPage = "thirdPage",
+  education = "education",
+  college = "college",
+  techCourse = "techCourse",
+  awsBadge = "awsBadge",
+  companies = "companies",
+  techStack = "techStack",
+  contact = "contact",
 }
 
 export interface PageConfig {
@@ -23,77 +27,237 @@ export const ParallaxConfig: Record<
 > = {
   [Adaptive.xs]: {
     pages: 4,
-    [Pages.firstPage]: {
-      offset: 0.22,
-      speed: 0.6,
-    },
-    [Pages.secondPage]: {
+    [Pages.education]: {
+      factor: 1,
       offset: 1,
-      speed: 1,
+      speed: 3,
+      sticky: {
+        start: 1,
+        end: 3,
+      },
     },
-    [Pages.thirdPage]: {
+    [Pages.college]: {
+      factor: 1,
+      offset: 1.2,
+      speed: 2,
+      sticky: { start: 1.2, end: 2 },
+    },
+    [Pages.techCourse]: {
+      factor: 1,
       offset: 1.5,
-      speed: 0.5,
+      speed: 3,
+      sticky: { start: 1.5, end: 2 },
+    },
+    [Pages.awsBadge]: {
+      factor: 1,
+      offset: 2.4,
+      speed: 2.8,
+      sticky: { start: 2.4, end: 3 },
+    },
+    [Pages.companies]: {
+      offset: 0.15,
+      factor: 0.15,
+      speed: 0.75,
+    },
+    [Pages.techStack]: {
+      sticky: { start: 0.5, end: 3.5 },
+      offset: 0.55,
+      factor: 0.15,
+      speed: 2,
+    },
+    [Pages.contact]: {
+      offset: 1.5,
+      factor: 1,
+      sticky: { start: 1.5, end: 3.5 },
+      speed: 2.8,
     },
   },
-  [Adaptive.s]: {
-    pages: 3,
-    [Pages.firstPage]: {
-      offset: 0.4,
-      speed: 0.8,
+  [Adaptive.sm]: {
+    pages: 4,
+    [Pages.education]: {
+      factor: 1,
+      offset: 1,
+      speed: 3,
+      sticky: {
+        start: 1,
+        end: 3,
+      },
     },
-    [Pages.secondPage]: {
-      offset: 0.8,
-      speed: 0.2,
+    [Pages.college]: {
+      factor: 1,
+      offset: 1.2,
+      speed: 2,
+      sticky: { start: 1.2, end: 2 },
     },
-    [Pages.thirdPage]: {
+    [Pages.techCourse]: {
+      factor: 1,
       offset: 1.5,
-      speed: 0.5,
+      speed: 3,
+      sticky: { start: 1.5, end: 2 },
+    },
+    [Pages.awsBadge]: {
+      factor: 1,
+      offset: 2.4,
+      speed: 2.8,
+      sticky: { start: 2.4, end: 3 },
+    },
+    [Pages.companies]: {
+      offset: 0.15,
+      factor: 0.15,
+      speed: 0.75,
+    },
+    [Pages.techStack]: {
+      sticky: { start: 0.5, end: 3.5 },
+      offset: 0.55,
+      factor: 0.15,
+      speed: 2,
+    },
+    [Pages.contact]: {
+      offset: 1.5,
+      factor: 1,
+      sticky: { start: 1.5, end: 3.5 },
+      speed: 2.8,
     },
   },
-  [Adaptive.m]: {
-    pages: 3,
-    [Pages.firstPage]: {
-      offset: 0.4,
-      speed: 0.8,
+  [Adaptive.md]: {
+    pages: 4,
+    [Pages.education]: {
+      factor: 1,
+      offset: 1,
+      speed: 3,
+      sticky: {
+        start: 1,
+        end: 3,
+      },
     },
-    [Pages.secondPage]: {
-      offset: 0.8,
-      speed: 0.2,
+    [Pages.college]: {
+      factor: 1,
+      offset: 1.2,
+      speed: 2,
+      sticky: { start: 1.2, end: 2 },
     },
-    [Pages.thirdPage]: {
+    [Pages.techCourse]: {
+      factor: 1,
       offset: 1.5,
-      speed: 0.5,
+      speed: 3,
+      sticky: { start: 1.5, end: 2 },
+    },
+    [Pages.awsBadge]: {
+      factor: 1,
+      offset: 2.4,
+      speed: 2.8,
+      sticky: { start: 2.4, end: 3 },
+    },
+    [Pages.companies]: {
+      offset: 0.15,
+      factor: 0.15,
+      speed: 0.75,
+    },
+    [Pages.techStack]: {
+      sticky: { start: 0.5, end: 3.5 },
+      offset: 0.55,
+      factor: 0.15,
+      speed: 2,
+    },
+    [Pages.contact]: {
+      offset: 1.5,
+      factor: 1,
+      sticky: { start: 1.5, end: 3.5 },
+      speed: 2.8,
     },
   },
-  [Adaptive.l]: {
-    pages: 3,
-    [Pages.firstPage]: {
-      offset: 0.4,
-      speed: 0.8,
+  [Adaptive.lg]: {
+    pages: 4,
+    [Pages.education]: {
+      factor: 1,
+      offset: 1,
+      speed: 3,
+      sticky: {
+        start: 1,
+        end: 3,
+      },
     },
-    [Pages.secondPage]: {
-      offset: 0.8,
-      speed: 0.2,
+    [Pages.college]: {
+      factor: 1,
+      offset: 1.2,
+      speed: 2,
+      sticky: { start: 1.2, end: 2 },
     },
-    [Pages.thirdPage]: {
+    [Pages.techCourse]: {
+      factor: 1,
       offset: 1.5,
-      speed: 0.5,
+      speed: 3,
+      sticky: { start: 1.5, end: 2 },
+    },
+    [Pages.awsBadge]: {
+      factor: 1,
+      offset: 2.4,
+      speed: 2.8,
+      sticky: { start: 2.4, end: 3 },
+    },
+    [Pages.companies]: {
+      offset: 0.15,
+      factor: 0.15,
+      speed: 0.75,
+    },
+    [Pages.techStack]: {
+      sticky: { start: 0.5, end: 3.5 },
+      offset: 0.55,
+      factor: 0.15,
+      speed: 2,
+    },
+    [Pages.contact]: {
+      offset: 1.5,
+      factor: 1,
+      sticky: { start: 1.5, end: 3.5 },
+      speed: 2.8,
     },
   },
   [Adaptive.xl]: {
-    pages: 3,
-    [Pages.firstPage]: {
-      offset: 0.4,
-      speed: 0.8,
+    pages: 4,
+    [Pages.education]: {
+      factor: 1,
+      offset: 1,
+      speed: 3,
+      sticky: {
+        start: 1,
+        end: 3,
+      },
     },
-    [Pages.secondPage]: {
-      offset: 0.8,
-      speed: 0.2,
+    [Pages.college]: {
+      factor: 1,
+      offset: 1.2,
+      speed: 2,
+      sticky: { start: 1.2, end: 2 },
     },
-    [Pages.thirdPage]: {
+    [Pages.techCourse]: {
+      factor: 1,
       offset: 1.5,
-      speed: 0.5,
+      speed: 3,
+      sticky: { start: 1.5, end: 2 },
+    },
+    [Pages.awsBadge]: {
+      factor: 1,
+      offset: 2.4,
+      speed: 2.8,
+      sticky: { start: 2.4, end: 3 },
+    },
+    [Pages.companies]: {
+      offset: 0.15,
+      factor: 0.15,
+      speed: 0.75,
+    },
+    [Pages.techStack]: {
+      sticky: { start: 0.5, end: 3.5 },
+      offset: 0.55,
+      factor: 0.15,
+      speed: 2,
+    },
+    [Pages.contact]: {
+      offset: 1.5,
+      factor: 1,
+      sticky: { start: 1.5, end: 3.5 },
+      speed: 2.8,
     },
   },
 };

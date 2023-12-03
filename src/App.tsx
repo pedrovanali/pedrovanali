@@ -12,7 +12,8 @@ import Companies from "./components/Companies";
 import Contact from "./components/Contact";
 import TechCourse from "./components/TechCourse";
 import TechStack from "./components/TechStack";
-import { useAdaptiveTriggers } from "./hooks/useAdapatitiveTriggers";
+import { useAdaptiveTriggers } from "./hooks/useAdaptiveTriggers";
+import { ParallaxConfig } from "./configs";
 
 function App() {
   const [parallax, setParallax] = useState<IParallax>(null!);
@@ -28,6 +29,8 @@ function App() {
     [setParallax]
   );
 
+  const parallaxScreenConfig = ParallaxConfig[width];
+
   return (
     <div className="container">
       <Parallax ref={parallaxRef} pages={4} onScrollCapture={handleScroll}>
@@ -41,68 +44,47 @@ function App() {
           <Profile scrollPosition={scrollPosition} />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1}
-          factor={1}
-          sticky={{ start: 1, end: 3 }}
-          speed={3}
+          {...parallaxScreenConfig.education}
           style={{ zIndex: 1 }}
           className="hide-container"
         >
           <h1 className="education-header">Education</h1>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.2}
-          factor={1}
-          sticky={{ start: 1.2, end: 2 }}
-          speed={2}
+          {...parallaxScreenConfig.college}
           style={{ zIndex: -1 }}
           className="hide-container"
         >
           <College />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.5}
-          factor={1}
-          sticky={{ start: 1.5, end: 2 }}
-          speed={3}
+          {...parallaxScreenConfig.techCourse}
           style={{ zIndex: -1 }}
           className="hide-container"
         >
           <TechCourse />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2.4}
-          factor={1}
-          sticky={{ start: 2.4, end: 3 }}
-          speed={2.8}
-          style={{ zIndex: -1 }}
+          {...parallaxScreenConfig.awsBadge}
           className="hide-container"
         >
           <AWSBadge />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={0.15}
-          factor={0.15}
-          speed={0.75}
+          {...parallaxScreenConfig.companies}
           style={{ zIndex: -1 }}
         >
           <Companies />
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.5, end: 3.5 }}
-          offset={0.55}
-          factor={0.15}
-          speed={2}
+          {...parallaxScreenConfig.techStack}
           style={{ zIndex: -1 }}
           className="hide-container"
         >
           <TechStack />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1.5}
-          factor={1}
-          sticky={{ start: 1.5, end: 3.5 }}
-          speed={2.8}
+          {...parallaxScreenConfig.contact}
           style={{ zIndex: 9, marginTop: "5rem" }}
         >
           <Contact />

@@ -1,12 +1,14 @@
 import clsx from "clsx";
 import { IScroll } from "../../interfaces";
 import "./Menu.scss";
+import { Adaptive } from "../../hooks/useAdaptiveTriggers";
 
 type MenuProps = IScroll & {
   scrollTo(offset: number): void;
+  width: Adaptive;
 };
 
-const Menu = ({ scrollTo, scrollPosition }: MenuProps) => {
+const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
   return (
     <header>
       <nav className={clsx("nav", scrollPosition > 40 && "small")}>
@@ -17,9 +19,13 @@ const Menu = ({ scrollTo, scrollPosition }: MenuProps) => {
             </button>
           </li>
           <li>
-            <button onClick={() => scrollTo && scrollTo(2)}>
-              
-           Education </button>
+            <button
+              onClick={() =>
+                scrollTo && scrollTo(width === Adaptive.xs ? 2.38 : 2)
+              }
+            >
+              Education{" "}
+            </button>
           </li>
           <li>
             <button onClick={() => scrollTo && scrollTo(3.5)}>Contact</button>

@@ -31,10 +31,6 @@ export const ParallaxConfig: Record<
       factor: 1,
       offset: 1,
       speed: 3,
-      sticky: {
-        start: 1,
-        end: 3,
-      },
     },
     [Pages.college]: {
       factor: 1,
@@ -112,9 +108,9 @@ export const ParallaxConfig: Record<
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 1.5,
+      offset: 3.5,
       factor: 1,
-      sticky: { start: 1.5, end: 3.5 },
+      sticky: { start: 3.5, end: 4 },
       speed: 2.8,
     },
   },
@@ -253,9 +249,9 @@ export const ParallaxConfig: Record<
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 1.5,
+      offset: 2.2,
       factor: 1,
-      sticky: { start: 1.5, end: 3.5 },
+      sticky: { start: 3, end: 4 },
       speed: 2.8,
     },
   },

@@ -18,6 +18,7 @@ import { ParallaxConfig } from "./configs";
 function App() {
   const [parallax, setParallax] = useState<IParallax>(null!);
   const width = useAdaptiveTriggers({});
+  console.log(width);
 
   const { handleScroll, scrollPosition, scrollTo } =
     useParallaxScroll(parallax);
@@ -40,7 +41,11 @@ function App() {
           factor={0.1}
           style={{ zIndex: 10, maxHeight: "50px" }}
         >
-          <Menu scrollPosition={scrollPosition} scrollTo={scrollTo} />
+          <Menu
+            scrollPosition={scrollPosition}
+            scrollTo={scrollTo}
+            width={width}
+          />
           <Profile scrollPosition={scrollPosition} />
         </ParallaxLayer>
         <ParallaxLayer

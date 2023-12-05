@@ -6,12 +6,13 @@ const Contact = () => {
       <h1>Contact Details</h1>
       <ul>
         <li>
+          GitHub:{" "}
           <a
             href="https://github.com/pedrovanali"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            pedrovanali
           </a>
         </li>
         <li>

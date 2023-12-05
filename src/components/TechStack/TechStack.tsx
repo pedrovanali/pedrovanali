@@ -7,6 +7,7 @@ import sass from "../../assets/sass.png";
 import reactTestingLibrary from "../../assets/react-testing.png";
 import git from "../../assets/git.png";
 import aws from "../../assets/aws.png";
+import circleci from "../../assets/circle-ci.png";
 
 const TechStack = () => {
   const props = useSpring({
@@ -55,6 +56,10 @@ const TechStack = () => {
         <li>
           <img src={aws} alt="AWS Logo" />
           Amazon Web Services
+        </li>
+        <li>
+          <img src={circleci} alt="Circle CI" />
+          Circle CI
         </li>
       </ul>
     </div>

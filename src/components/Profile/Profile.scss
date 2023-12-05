@@ -7,7 +7,7 @@
     height: 200px;
     transition: transform 0.5s ease;
     background: {
-        image: url("../../assets/profile.jpeg");
+        image: url("../../assets/profile.png");
         size: cover;
         repeat: no-repeat;
     }
@@ -36,11 +36,6 @@
         height: 50px;
         transition: transform 0.5s ease;
         margin: 0.5em;
-        background: {
-            image: url("../../assets/profile.jpeg");
-            size: cover;
-            repeat: no-repeat;
-        }
         border: {
             color: $bright;
             width: 10px;

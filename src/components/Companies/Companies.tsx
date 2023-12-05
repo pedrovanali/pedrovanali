@@ -1,10 +1,10 @@
 import BlankLogo from "../BlankLogo";
 import Company from "../Company";
-import accenture from "../../assets/accenture.jpg";
-import accolite from "../../assets/accolite.jpg";
-import ap from "../../assets/ap.jpeg";
+import accenture from "../../assets/accenture.png";
+import accolite from "../../assets/accolite.png";
+import ap from "../../assets/ap.png";
 import exxon from "../../assets/exxon.png";
-import realtech from "../../assets/realtech.jpeg";
+import realtech from "../../assets/realtech.png";
 import TechStack from "../TechStack";
 import "./Companies.scss";
 import { useMemo } from "react";

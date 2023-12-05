@@ -1,4 +1,4 @@
-import tecpuc from "../../assets/tecpucpr.jpg";
+import tecpuc from "../../assets/tecpucpr.png";
 import "./TechCourse.scss";
 
 const TechCourse = () => {

@@ -25,7 +25,7 @@ describe("TechCourse test suite", () => {
     render(<TechCourse />);
 
     const logo = screen.getByRole("img");
-    expect(logo).toHaveAttribute("src", "tecpucpr.jpg");
+    expect(logo).toHaveAttribute("src", "tecpucpr.png");
     expect(logo).toHaveAttribute("alt", "TECPUCPR");
   });
 });

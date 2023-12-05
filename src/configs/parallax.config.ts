@@ -66,9 +66,8 @@ export const ParallaxConfig: Record<
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 1.5,
+      offset: 3,
       factor: 1,
-      sticky: { start: 1.5, end: 3.5 },
       speed: 2.8,
     },
   },

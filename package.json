@@ -22,12 +22,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "jest-junit": "^16.0.0",
     "sass": "^1.69.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --ci --runInBand --reporters=default --reporters=jest-junit --passWithNoTests",
     "test:watch": "react-scripts test --watchAll --coverage",
     "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject"

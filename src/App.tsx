@@ -1,5 +1,5 @@
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import "./App.scss";
 import Menu from "./components/Menu";
@@ -14,11 +14,17 @@ import TechCourse from "./components/TechCourse";
 import TechStack from "./components/TechStack";
 import { useAdaptiveTriggers } from "./hooks/useAdaptiveTriggers";
 import { ParallaxConfig } from "./configs";
+import ReactGA from "react-ga4";
 
 function App() {
   const [parallax, setParallax] = useState<IParallax>(null!);
   const width = useAdaptiveTriggers({});
-  console.log(width);
+
+  useEffect(() => {
+    if (process.env.REACT_APP_METRIC_ID) {
+      ReactGA.initialize(process.env.REACT_APP_METRIC_ID);
+    }
+  }, []);
 
   const { handleScroll, scrollPosition, scrollTo } =
     useParallaxScroll(parallax);

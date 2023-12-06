@@ -1,5 +1,6 @@
 import { IParallax } from "@react-spring/parallax";
 import { useState, useEffect, useCallback } from "react";
+import ReactGA from "react-ga4";
 
 const useParallaxScroll = (parallax: IParallax) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -7,6 +8,11 @@ const useParallaxScroll = (parallax: IParallax) => {
   const handleScroll = useCallback(() => {
     if (parallax) {
       const position = parallax.current;
+      ReactGA.event({
+        category: "Scrolled from menu",
+        action: `scrolled to ${position}`,
+        label: "scroll",
+      });
       setScrollPosition(position);
     }
   }, [parallax, setScrollPosition]);

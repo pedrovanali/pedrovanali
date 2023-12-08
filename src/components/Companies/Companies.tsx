@@ -134,8 +134,9 @@ const Companies = () => {
   );
   return (
     <>
-      {companies.map(({ logo, companyName, description, techStack }) => (
+      {companies.map(({ logo, companyName, description, techStack }, index) => (
         <Company
+          key={index}
           logo={logo}
           companyName={companyName}
           description={description}

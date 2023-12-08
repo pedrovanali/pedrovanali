@@ -12,7 +12,27 @@
     }
 }
 
-@media screen and (max-width: $xs) {
+@media screen and (max-width: $lg) {
+    .badge-container {
+        top: 35rem;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .badge-container {
+        position: relative;
+        top: 40rem;
+        left: 0;
+        right: 0;
+        img {
+            align-self: center;
+            width: 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
     .badge-container {
         position: relative;
         top: 8rem;

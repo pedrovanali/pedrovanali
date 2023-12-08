@@ -7,6 +7,7 @@ export enum Adaptive {
   md = "md",
   lg = "lg",
   xl = "xl",
+  xxl = "xxl",
 }
 
 interface UseAdaptiveTriggersProps {

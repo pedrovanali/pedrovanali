@@ -4,12 +4,33 @@
     flex-direction: column;
     position: relative;
     h1 {
+        box-sizing: border-box;
         color: $primary;
         font: {
             weight: 600;
         }
         text: {
             transform: uppercase;
+        }
+    }
+}
+@media screen and (max-width: $lg) {
+    .education-container {
+        h1 {
+        
+            display: flex;
+            padding-right: 10rem;
+            justify-content: flex-end;
+        }
+    }
+}
+@media screen and (max-width: $md) {
+    .education-container {
+        h1 {
+        
+            display: flex;
+            padding-right: 0;
+            justify-content: center;
         }
     }
 }

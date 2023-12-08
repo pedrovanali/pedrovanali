@@ -65,7 +65,7 @@ $bebas: map.get($font-family, "bebas-neue");
     }
 }
 
-@media screen and (max-width: $xs) {
+@media screen and (max-width: $md) {
     .nav {
         top: 0;
         left: 0;
@@ -78,17 +78,43 @@ $bebas: map.get($font-family, "bebas-neue");
             li {
                 button {
                     font: {
-                        size: 2rem;
+                        size: 1.5rem;
                     }
                 }
             }
         }
         &.small {
             transition: none;
+
             ul {
                 button {
                     font: {
-                        size: 1.8rem;
+                        size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .nav {
+        ul {
+            li {
+                button {
+                    font: {
+                        size: 1.3rem;
+                    }
+                }
+            }
+        }
+        &.small {
+            transition: none;
+
+            ul {
+                button {
+                    font: {
+                        size: 1.3rem;
                     }
                 }
             }

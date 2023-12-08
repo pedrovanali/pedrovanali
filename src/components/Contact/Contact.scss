@@ -34,10 +34,28 @@
     }
 }
 
-@media screen and (max-width: $xs) {
+@media screen and (max-width: $md) {
     .contact-container {
         margin: {
-            top: 0;
+            top: 15rem;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .contact-container {
+        margin: {
+            top: 15rem;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .contact-container {
+        margin: {
+            top: 20rem;
             left: 0;
         }
     }

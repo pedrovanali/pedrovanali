@@ -70,7 +70,7 @@ function App() {
         </ParallaxLayer>
         <ParallaxLayer
           {...parallaxScreenConfig.techCourse}
-          style={{ zIndex: -1 }}
+          style={{ zIndex: 5 }}
           className="hide-container"
         >
           <TechCourse />
@@ -94,10 +94,7 @@ function App() {
         >
           <TechStack />
         </ParallaxLayer>
-        <ParallaxLayer
-          {...parallaxScreenConfig.contact}
-          style={{ zIndex: 9, marginTop: "5rem" }}
-        >
+        <ParallaxLayer {...parallaxScreenConfig.contact} style={{ zIndex: 9 }}>
           <Contact />
         </ParallaxLayer>
       </Parallax>

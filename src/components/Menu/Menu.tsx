@@ -3,6 +3,7 @@ import { IScroll } from "../../interfaces";
 import "./Menu.scss";
 import { Adaptive } from "../../hooks/useAdaptiveTriggers";
 import ReactGA from "react-ga4";
+import { breakpoints } from "../../configs";
 
 type MenuProps = IScroll & {
   scrollTo(offset: number): void;
@@ -10,6 +11,18 @@ type MenuProps = IScroll & {
 };
 
 const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
+  const screenWidth = window.screen.width;
+
+  const screenCoalescing = 1 - screenWidth / breakpoints[width];
+
+  const educationPositionBasedOnWidth: Record<string, number> = {
+    [Adaptive.xs]: 2.6 + screenCoalescing,
+    [Adaptive.sm]: 2 + screenCoalescing,
+    [Adaptive.md]: 1.75 + screenCoalescing,
+    [Adaptive.lg]: 1.5+ screenCoalescing,
+    [Adaptive.xl]: 2.38 + screenCoalescing,
+    [Adaptive.xxl]: 2.38 + screenCoalescing,
+  };
   const scrollToHandler = (position: number, option: string) => () => {
     if (position > 0) {
       ReactGA.event({
@@ -31,7 +44,7 @@ const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
           <li>
             <button
               onClick={scrollToHandler(
-                width === Adaptive.xs ? 2.38 : 2,
+                educationPositionBasedOnWidth[width],
                 "education"
               )}
             >

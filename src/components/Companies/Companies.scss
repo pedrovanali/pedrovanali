@@ -1,4 +1,5 @@
-@media screen and (min-width: 933px) {
+@import "../../theme.scss";
+@media screen and (min-width: $lg) {
     .mobile-stack {
         display: none;
     }

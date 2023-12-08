@@ -16,9 +16,14 @@
     }
   }
 }
-
-@media screen and (max-width: $xs) {
+@media screen and (max-width: $lg) {
   .hide-container {
     display: none;
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .hide-container {
+    display: inherit;
   }
 }

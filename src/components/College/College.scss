@@ -15,3 +15,30 @@
         color: $bright;
     }
 }
+@media screen and (max-width: $lg) {
+    .college-container {
+        right: 2rem;
+
+    }
+}
+
+@media screen and (max-width: $md) {
+    .college-container {
+        right: 2rem;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .college-container {
+        width: 150px;
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .college-container {
+        width: 150px;
+        right: .8rem;
+    }
+}

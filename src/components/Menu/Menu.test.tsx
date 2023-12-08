@@ -26,12 +26,32 @@ describe("Profile test suite", () => {
   it("should check if education calls scroll to function when defined and not mobile", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={width} />);
     fireEvent.click(screen.getByText(/education/i));
-    expect(scrollTo).toHaveBeenCalledWith(2);
+    expect(scrollTo).toHaveBeenCalledWith(3);
   });
-  it("should check if education calls scroll to function when defined and mobile", () => {
+  it("should check if education calls scroll to function when defined and sx", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.xs} />);
     fireEvent.click(screen.getByText(/education/i));
-    expect(scrollTo).toHaveBeenCalledWith(2.38);
+    expect(scrollTo).toHaveBeenCalledWith(3.6);
+  });
+  it("should check if education calls scroll to function when defined and sm", () => {
+    render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.sm} />);
+    fireEvent.click(screen.getByText(/education/i));
+    expect(scrollTo).toHaveBeenCalledWith(3);
+  });
+  it("should check if education calls scroll to function when defined and md", () => {
+    render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.md} />);
+    fireEvent.click(screen.getByText(/education/i));
+    expect(scrollTo).toHaveBeenCalledWith(2.75);
+  });
+  it("should check if education calls scroll to function when defined and lg", () => {
+    render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.lg} />);
+    fireEvent.click(screen.getByText(/education/i));
+    expect(scrollTo).toHaveBeenCalledWith(2.5);
+  });
+  it("should check if education calls scroll to function when defined and xl", () => {
+    render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.lg} />);
+    fireEvent.click(screen.getByText(/education/i));
+    expect(scrollTo).toHaveBeenCalledWith(2.5);
   });
   it("should check if contact button calls scroll to function when defined width", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={width} />);

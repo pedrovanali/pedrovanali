@@ -40,9 +40,14 @@ function App() {
 
   return (
     <div className="container">
-      <Parallax ref={parallaxRef} pages={4} onScrollCapture={handleScroll}>
+      <Parallax
+        key={width}
+        ref={parallaxRef}
+        pages={parallaxScreenConfig?.pages}
+        onScrollCapture={handleScroll}
+      >
         <ParallaxLayer
-          sticky={{ start: 0, end: 4 }}
+          sticky={{ start: 0, end: parallaxScreenConfig.pages }}
           speed={0.5}
           factor={0.1}
           style={{ zIndex: 10, maxHeight: "50px" }}

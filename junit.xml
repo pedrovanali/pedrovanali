@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="33" failures="0" errors="0" time="5.13">
+  <testsuite name="Profile test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:55" time="1.137" tests="13">
+    <testcase classname="Profile test suite should check if work history is available" name="Profile test suite should check if work history is available" time="0.018">
+    </testcase>
+    <testcase classname="Profile test suite should check if contact is available" name="Profile test suite should check if contact is available" time="0.003">
+    </testcase>
+    <testcase classname="Profile test suite should check if education is available" name="Profile test suite should check if education is available" time="0.004">
+    </testcase>
+    <testcase classname="Profile test suite should check if work history button calls scroll to function when defined" name="Profile test suite should check if work history button calls scroll to function when defined" time="0.007">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and not mobile" name="Profile test suite should check if education calls scroll to function when defined and not mobile" time="0.004">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and xs" name="Profile test suite should check if education calls scroll to function when defined and xs" time="0.005">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and sm" name="Profile test suite should check if education calls scroll to function when defined and sm" time="0.007">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and md" name="Profile test suite should check if education calls scroll to function when defined and md" time="0.004">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and lg" name="Profile test suite should check if education calls scroll to function when defined and lg" time="0.003">
+    </testcase>
+    <testcase classname="Profile test suite should check if education calls scroll to function when defined and xl" name="Profile test suite should check if education calls scroll to function when defined and xl" time="0.004">
+    </testcase>
+    <testcase classname="Profile test suite should check if contact button calls scroll to function when defined width" name="Profile test suite should check if contact button calls scroll to function when defined width" time="0.01">
+    </testcase>
+    <testcase classname="Profile test suite should check small class is added" name="Profile test suite should check small class is added" time="0.002">
+    </testcase>
+    <testcase classname="Profile test suite should check small class is not in the document" name="Profile test suite should check small class is not in the document" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="TechCourse test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:56" time="0.608" tests="5">
+    <testcase classname="TechCourse test suite should render tech course component" name="TechCourse test suite should render tech course component" time="0.049">
+    </testcase>
+    <testcase classname="TechCourse test suite should contain heading level with text content" name="TechCourse test suite should contain heading level with text content" time="0.02">
+    </testcase>
+    <testcase classname="TechCourse test suite should contain period of course" name="TechCourse test suite should contain period of course" time="0.003">
+    </testcase>
+    <testcase classname="TechCourse test suite should render technical course header" name="TechCourse test suite should render technical course header" time="0.003">
+    </testcase>
+    <testcase classname="TechCourse test suite should render tech course image" name="TechCourse test suite should render tech course image" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="College test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:57" time="0.482" tests="6">
+    <testcase classname="College test suite should render college component" name="College test suite should render college component" time="0.035">
+    </testcase>
+    <testcase classname="College test suite should contain heading level with text content" name="College test suite should contain heading level with text content" time="0.013">
+    </testcase>
+    <testcase classname="College test suite should contain correct classname" name="College test suite should contain correct classname" time="0.003">
+    </testcase>
+    <testcase classname="College test suite should contain period of course" name="College test suite should contain period of course" time="0.004">
+    </testcase>
+    <testcase classname="College test suite should render college header" name="College test suite should render college header" time="0.004">
+    </testcase>
+    <testcase classname="College test suite should render college image" name="College test suite should render college image" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="AWSBadge test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:58" time="0.372" tests="2">
+    <testcase classname="AWSBadge test suite should render aws badge component" name="AWSBadge test suite should render aws badge component" time="0.016">
+    </testcase>
+    <testcase classname="AWSBadge test suite should render aws image" name="AWSBadge test suite should render aws image" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:58" time="0.372" tests="1">
+    <testcase classname="Profile test suite should check profile is normal sized" name="Profile test suite should check profile is normal sized" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="Company test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:58" time="0.396" tests="5">
+    <testcase classname="Company test suite should render company component and display description" name="Company test suite should render company component and display description" time="0.017">
+    </testcase>
+    <testcase classname="Company test suite should render company component and display company name" name="Company test suite should render company component and display company name" time="0.003">
+    </testcase>
+    <testcase classname="Company test suite should render company component and display tech stack" name="Company test suite should render company component and display tech stack" time="0.002">
+    </testcase>
+    <testcase classname="Company test suite should render company to contain image" name="Company test suite should render company to contain image" time="0.014">
+    </testcase>
+    <testcase classname="Company test suite should render custom react node logo instead of img" name="Company test suite should render custom react node logo instead of img" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="BlankLogo test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:59" time="0.37" tests="1">
+    <testcase classname="BlankLogo test suite should render blank logo component with initial only" name="BlankLogo test suite should render blank logo component with initial only" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Education test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:59" time="0.19" tests="0">
+    <testcase classname="Education test suite tech stack tests" name="Education test suite tech stack tests" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Companies test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:08:59" time="0.194" tests="0">
+    <testcase classname="Companies test suite should test companies" name="Companies test suite should test companies" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="App test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:09:00" time="0.19" tests="0">
+    <testcase classname="App test suite create tests for app" name="App test suite create tests for app" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="TechStack test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:09:00" time="0.206" tests="0">
+    <testcase classname="TechStack test suite tech stack tests" name="TechStack test suite tech stack tests" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Contact test suite" errors="0" failures="0" skipped="0" timestamp="2023-12-09T02:09:00" time="0.195" tests="0">
+    <testcase classname="Contact test suite Contact test suite" name="Contact test suite Contact test suite" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

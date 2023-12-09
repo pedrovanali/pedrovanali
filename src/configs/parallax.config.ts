@@ -26,7 +26,7 @@ export const ParallaxConfig: Record<
   Record<Pages, PageConfig> & LayoutConfig
 > = {
   [Adaptive.xs]: {
-    pages: 4,
+    pages: 5,
     [Pages.education]: {
       factor: 1,
       offset: 1,
@@ -34,21 +34,18 @@ export const ParallaxConfig: Record<
     },
     [Pages.college]: {
       factor: 1,
-      offset: 1.2,
+      offset: 2,
       speed: 2,
-      sticky: { start: 1.2, end: 2 },
     },
     [Pages.techCourse]: {
       factor: 1,
-      offset: 1.5,
+      offset: 3,
       speed: 3,
-      sticky: { start: 1.5, end: 2 },
     },
     [Pages.awsBadge]: {
       factor: 1,
-      offset: 2.4,
+      offset: 4,
       speed: 2.8,
-      sticky: { start: 2.4, end: 3 },
     },
     [Pages.companies]: {
       offset: 0.15,
@@ -56,13 +53,12 @@ export const ParallaxConfig: Record<
       speed: 0.75,
     },
     [Pages.techStack]: {
-      sticky: { start: 0.5, end: 3.5 },
       offset: 0.55,
-      factor: 0.15,
+      factor: 5,
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 3,
+      offset: 4,
       factor: 1,
       speed: 2.8,
     },
@@ -73,44 +69,37 @@ export const ParallaxConfig: Record<
       factor: 1,
       offset: 1,
       speed: 3,
-      sticky: {
-        start: 1,
-        end: 3,
-      },
     },
     [Pages.college]: {
       factor: 1,
-      offset: 1.2,
+      offset: 2,
       speed: 2,
-      sticky: { start: 1.2, end: 2 },
     },
     [Pages.techCourse]: {
       factor: 1,
-      offset: 1.5,
+      offset: 3,
       speed: 3,
-      sticky: { start: 1.5, end: 2 },
     },
     [Pages.awsBadge]: {
       factor: 1,
-      offset: 2.4,
+      offset: 4,
       speed: 2.8,
-      sticky: { start: 2.4, end: 3 },
     },
     [Pages.companies]: {
-      offset: 0.15,
       factor: 0.15,
+      offset: 0.15,
       speed: 0.75,
     },
     [Pages.techStack]: {
-      sticky: { start: 0.5, end: 3.5 },
       offset: 0.55,
-      factor: 0.15,
+      factor: 5,
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 3,
+      offset: 2,
       factor: 1,
       speed: 2.8,
+      sticky: { start: 3.8, end: 4 },
     },
   },
   [Adaptive.md]: {
@@ -200,9 +189,9 @@ export const ParallaxConfig: Record<
       speed: 2,
     },
     [Pages.contact]: {
-      offset: 2,
+      offset: 3,
       factor: 1,
-      sticky: { start: 2.5, end: 4 },
+      sticky: { start: 3, end: 4 },
       speed: 2.8,
     },
   },
@@ -225,15 +214,15 @@ export const ParallaxConfig: Record<
     },
     [Pages.techCourse]: {
       factor: 1,
-      offset: 1.5,
+      offset: 2.2,
       speed: 3,
-      sticky: { start: 1.5, end: 2 },
+      sticky: { start: 2.2, end: 2.4 },
     },
     [Pages.awsBadge]: {
       factor: 1,
-      offset: 2.4,
+      offset: 2.5,
       speed: 2.8,
-      sticky: { start: 2.4, end: 3 },
+      sticky: { start: 2.5, end: 3 },
     },
     [Pages.companies]: {
       offset: 0.15,

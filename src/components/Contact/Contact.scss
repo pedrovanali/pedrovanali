@@ -45,6 +45,7 @@
 
 @media screen and (max-width: $sm) {
     .contact-container {
+        display: flex;
         margin: {
             top: 15rem;
             left: 0;

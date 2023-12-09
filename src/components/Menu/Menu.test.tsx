@@ -26,9 +26,9 @@ describe("Profile test suite", () => {
   it("should check if education calls scroll to function when defined and not mobile", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={width} />);
     fireEvent.click(screen.getByText(/education/i));
-    expect(scrollTo).toHaveBeenCalledWith(3);
+    expect(scrollTo).toHaveBeenCalledWith(3.3);
   });
-  it("should check if education calls scroll to function when defined and sx", () => {
+  it("should check if education calls scroll to function when defined and xs", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.xs} />);
     fireEvent.click(screen.getByText(/education/i));
     expect(scrollTo).toHaveBeenCalledWith(3.6);
@@ -36,7 +36,7 @@ describe("Profile test suite", () => {
   it("should check if education calls scroll to function when defined and sm", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.sm} />);
     fireEvent.click(screen.getByText(/education/i));
-    expect(scrollTo).toHaveBeenCalledWith(3);
+    expect(scrollTo).toHaveBeenCalledWith(3.3);
   });
   it("should check if education calls scroll to function when defined and md", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={Adaptive.md} />);
@@ -56,7 +56,7 @@ describe("Profile test suite", () => {
   it("should check if contact button calls scroll to function when defined width", () => {
     render(<Menu scrollPosition={0} scrollTo={scrollTo} width={width} />);
     fireEvent.click(screen.getByText(/contact/i));
-    expect(scrollTo).toHaveBeenCalledWith(3.5);
+    expect(scrollTo).toHaveBeenCalledWith(4);
   });
   it("should check small class is added", () => {
     const { container } = render(

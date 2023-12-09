@@ -3,7 +3,7 @@ import { IScroll } from "../../interfaces";
 import "./Menu.scss";
 import { Adaptive } from "../../hooks/useAdaptiveTriggers";
 import ReactGA from "react-ga4";
-import { breakpoints } from "../../configs";
+import { ParallaxConfig, breakpoints } from "../../configs";
 
 type MenuProps = IScroll & {
   scrollTo(offset: number): void;
@@ -17,9 +17,9 @@ const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
 
   const educationPositionBasedOnWidth: Record<string, number> = {
     [Adaptive.xs]: 2.6 + screenCoalescing,
-    [Adaptive.sm]: 2 + screenCoalescing,
+    [Adaptive.sm]: 2.3 + screenCoalescing,
     [Adaptive.md]: 1.75 + screenCoalescing,
-    [Adaptive.lg]: 1.5+ screenCoalescing,
+    [Adaptive.lg]: 1.5 + screenCoalescing,
     [Adaptive.xl]: 2.38 + screenCoalescing,
     [Adaptive.xxl]: 2.38 + screenCoalescing,
   };
@@ -32,6 +32,7 @@ const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
       scrollTo(position);
     }
   };
+  const parallaxScreenConfig = ParallaxConfig[width];
   return (
     <header>
       <nav className={clsx("nav", scrollPosition > 40 && "small")}>
@@ -52,7 +53,11 @@ const Menu = ({ scrollTo, scrollPosition, width }: MenuProps) => {
             </button>
           </li>
           <li>
-            <button onClick={scrollToHandler(3.5, "contact")}>Contact</button>
+            <button
+              onClick={scrollToHandler(parallaxScreenConfig.pages, "contact")}
+            >
+              Contact
+            </button>
           </li>
         </ul>
       </nav>
